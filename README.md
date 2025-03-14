@@ -41,3 +41,6 @@ Por un lado, el conocimiento de estos datos conlleva consideraciones éticas, ya
 | Urban_or_Rural_Area | Si el accidente ocurrió en área urbana o rural. | Categórico |
 | Weather_Conditions | Condiciones climáticas al momento del accidente. | Categórico |
 | Vehicle_Type | Tipo de vehículo involucrado. | Categórico |
+
+### Carga inicial de datos en PostgreSQL: 
+Antes de comenzar, asegúrate de guardar el archivo de datos en formato CSV.
