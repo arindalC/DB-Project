@@ -45,6 +45,7 @@ Por un lado, el conocimiento de estos datos conlleva consideraciones éticas, ya
 ### Carga inicial de datos en PostgreSQL: 
 #### **psql**
 CREATE DATABASE accidentes_trafico;
+
 postgres=# \c accidentes_trafico
 
 #### **PostgresSQL**
