@@ -46,16 +46,19 @@ Por un lado, el conocimiento de estos datos conlleva consideraciones éticas, ya
 **Nota**: Asegúrate de guardar el archivo `.csv` antes de comenzar.
 1. Crear la base de datos (desde psql):
 
-CREATE DATABASE accidentes_trafico;
-2. Conectarse a la base de datos (en consola psql):
+   CREATE DATABASE accidentes_trafico;
+   
+3. Conectarse a la base de datos (en consola psql):
 
-postgres=# \c accidentes_trafico
+   postgres=# \c accidentes_trafico
+   
 3. Crear el esquema y la tabla (desde PostgresSQL):
 
-[Ver carga_inicial.sql](https://github.com/arindalC/DB-Project/blob/main/carga_inicial.sql)
+  [Ver carga_inicial.sql](https://github.com/arindalC/DB-Project/blob/main/carga_inicial.sql)
+  
 4. Cargar datos desde un archivo .csv (desde psql):
 
-accidentes_trafico=# \copy road_data.road_accidents(accident_index, accident_date, month, day_of_week, year, junction_control, junction_detail, accident_severity, latitude, light_conditions,     local_authority_district, carriageway_hazards, longitude, number_of_casualties, number_of_vehicles, police_force, road_surface_conditions, road_type, speed_limit, accident_time,  urban_or_rural_area, weather_conditions, vehicle_type) FROM '/Users/Desktop/Road Accident Data.csv' WITH (FORMAT CSV, HEADER true, DELIMITER ',');
+accidentes_trafico=# \copy road_data.road_accidents(accident_index, accident_date, month, day_of_week, year, junction_control, junction_detail, accident_severity,               latitude, light_conditions,     local_authority_district, carriageway_hazards, longitude, number_of_casualties, number_of_vehicles, police_force, road_surface_conditions,        road_type, speed_limit, accident_time,  urban_or_rural_area, weather_conditions, vehicle_type) FROM '/Users/Desktop/Road Accident Data.csv' WITH (FORMAT CSV, HEADER true,        DELIMITER ',');
 
    
    
