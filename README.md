@@ -52,4 +52,4 @@ postgres=# \c accidentes_trafico
 Apartado en carga_inicial
 
 #### **psql**
-accidentes_trafico=# \copy road_data.road_accidents(accident_index, accident_date, month, day_of_week, year, junction_control, junction_detail, accident_severity, latitude, light_conditions, local_authority_district, carriageway_hazards, longitude, number_of_casualties, number_of_vehicles, police_force, road_surface_conditions, road_type, speed_limit, accident_time, urban_or_rural_area, weather_conditions, vehicle_type) FROM '/Users/Desktop/Road Accident Data.csv' WITH (FORMAT CSV, HEADER true, DELIMITER ',')
+accidentes_trafico=# \copy road_data.road_accidents(accident_index, accident_date, month, day_of_week, year, junction_control, junction_detail, accident_severity, latitude, light_conditions, local_authority_district, carriageway_hazards, longitude, number_of_casualties, number_of_vehicles, police_force, road_surface_conditions, road_type, speed_limit, accident_time, urban_or_rural_area, weather_conditions, vehicle_type) FROM '/Users/Desktop/Road Accident Data.csv' WITH (FORMAT CSV, HEADER true, DELIMITER ',');
