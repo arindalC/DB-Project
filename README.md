@@ -65,5 +65,28 @@ Por un lado, el conocimiento de estos datos conlleva consideraciones éticas, ya
  El archivo [road_accidents_eda.sql](https://github.com/arindalC/DB-Project/blob/main/road_accidents_eda.sql) contiene una colección de consultas SQL utilizadas para realizar el análisis exploratorio de los datos. 
    
 ###  Limpieza de datos:
+Este repositorio contiene los datos y scripts asociados a la limpieza y preparación de datos sobre la base de datos. 
+[limpieza_datos_proyecto.sql](https://github.com/arindalC/DB-Project/blob/main/limpieza_datos_proyecto.sql)
+
+1. Las siguientes actividades fueron llevadas a cabo para limpiar los datos:
+  Creación de un nuevo esquema (cleaned_road_data): Para mantener una separación clara entre los datos brutos y los datos procesados.
+2. Eliminación de columnas redundantes:
+  Se eliminaron las columnas Month, Year y Day_of_Week, ya que esta información ya está contenida en Accident Date.
+3. Conversión de tipos de datos:
+  Se transformaron las fechas (Accident Date) al tipo DATE.
+  Se separó la hora (Time) en un campo TIME para facilitar el análisis por franjas horarias.
+4. Cambio de nombres de columnas:
+  Se renombraron columnas a un formato estandarizado y legible, por ejemplo, Number_of_Casualties a casualties.
+5. Normalización de valores:
+  Se agruparon y homogeneizaron valores en campos como Accident Severity, Weather_Conditions y Urban_or_Rural_Area.
+6. Eliminación de registros o columnas innecesarias:
+  Se descartaron columnas irrelevantes como Accident_Index y datos duplicados.
+
+Operaciones no triviales y justificación
+Creación de una tabla nueva en lugar de modificar la existente: Esto permite mantener trazabilidad y reproducibilidad, facilitando auditorías o regresos a versiones anteriores.
+Conversión de coordenadas a tipo NUMERIC: Para permitir análisis geoespaciales más precisos, se conservaron las coordenadas Latitude y Longitude como campos numéricos.
+Manejo explícito de claves primarias (accident_ID): Se usa un campo SERIAL para facilitar la referencia e integridad en modelos relacionales.
+
+
 
 
