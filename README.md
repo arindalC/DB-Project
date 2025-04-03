@@ -64,5 +64,6 @@ Por un lado, el conocimiento de estos datos conlleva consideraciones éticas, ya
  ###  Análisis exploratorio de datos:
  El archivo [road_accidents_eda.sql](https://github.com/arindalC/DB-Project/blob/main/road_accidents_eda.sql) contiene una colección de consultas SQL utilizadas para realizar el análisis exploratorio de los datos. 
    
+###  Limpieza de datos:
 
 
