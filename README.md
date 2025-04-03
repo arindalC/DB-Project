@@ -69,8 +69,7 @@ Este repositorio contiene los datos y scripts asociados a la limpieza y preparac
 [limpieza_datos_proyecto.sql](https://github.com/arindalC/DB-Project/blob/main/limpieza_datos_proyecto.sql)
 
 Las siguientes actividades fueron llevadas a cabo para limpiar los datos:
-1. Para realizar la limpieza de datos se creó  una tabla nueva en lugar de modificar la existente para evitar modificar el csv original y un nuevo esquema  
-   (cleaned_road_data).
+1. Para realizar la limpieza de datos se creó un nuevo esquema (cleaned_road_data) y una tabla en lugar de modificar la existente.
 2. Eliminación de columnas redundantes:
    Se eliminaron las columnas Month, Year y Day_of_Week, ya que esta información ya está contenida en Accident Date.
 3. Conversión de tipos de datos:
