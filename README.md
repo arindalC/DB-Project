@@ -68,19 +68,19 @@ Por un lado, el conocimiento de estos datos conlleva consideraciones éticas, ya
 Este repositorio contiene los datos y scripts asociados a la limpieza y preparación de datos sobre la base de datos. 
 [limpieza_datos_proyecto.sql](https://github.com/arindalC/DB-Project/blob/main/limpieza_datos_proyecto.sql)
 
-1. Las siguientes actividades fueron llevadas a cabo para limpiar los datos:
-   Para realizar la limpieza de datos se creó  una tabla nueva en lugar de modificar la existente para evitar modificar el csv original y un nuevo esquema  
+Las siguientes actividades fueron llevadas a cabo para limpiar los datos:
+1. Para realizar la limpieza de datos se creó  una tabla nueva en lugar de modificar la existente para evitar modificar el csv original y un nuevo esquema  
    (cleaned_road_data).
-3. Eliminación de columnas redundantes:
+2. Eliminación de columnas redundantes:
    Se eliminaron las columnas Month, Year y Day_of_Week, ya que esta información ya está contenida en Accident Date.
-4. Conversión de tipos de datos:
+3. Conversión de tipos de datos:
    Se transformaron las fechas (Accident Date) al tipo DATE.
    Se separó la hora (Time) en un campo TIME para facilitar el análisis por franjas horarias.
-5. Cambio de nombres de columnas:
+4. Cambio de nombres de columnas:
    Se renombraron columnas a un formato estandarizado y legible, por ejemplo, Number_of_Casualties a casualties.
-6. Normalización de valores:
+5. Normalización de valores:
    Se agruparon y homogeneizaron valores en campos como Accident Severity, Weather_Conditions y Urban_or_Rural_Area.
-7. Eliminación de registros o columnas:
+6. Eliminación de registros o columnas:
    Se descartaron columnas como Accident_Index y se creó un nuevo id artificial ya que habían ids duplicados pero con datos diferentes. De igual manera se eliminó la       
    columna "carriageway_hazard" ya que habían muy pocos datos con un valor diferente a "None". 
 
