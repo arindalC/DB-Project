@@ -1,0 +1,34 @@
+Road Accident Data Cleaning Project
+Este repositorio contiene los datos y scripts asociados a un proyecto de limpieza y preparación de datos sobre accidentes de tráfico. 
+El objetivo principal fue transformar una base de datos original con inconsistencias y redundancias en una versión limpia, útil para análisis posteriore
+
+Actividades realizadas
+Las siguientes actividades fueron llevadas a cabo para limpiar los datos:
+Creación de un nuevo esquema (cleaned_road_data): Para mantener una separación clara entre los datos brutos y los datos procesados.
+Eliminación de columnas redundantes:
+Se eliminaron las columnas Month, Year y Day_of_Week, ya que esta información ya está contenida en Accident Date.
+Conversión de tipos de datos:
+Se transformaron las fechas (Accident Date) al tipo DATE.
+Se separó la hora (Time) en un campo TIME para facilitar el análisis por franjas horarias.
+Cambio de nombres de columnas:
+Se renombraron columnas a un formato estandarizado y legible, por ejemplo, Number_of_Casualties a casualties.
+Normalización de valores:
+Se agruparon y homogeneizaron valores en campos como Accident Severity, Weather_Conditions y Urban_or_Rural_Area.
+Eliminación de registros o columnas innecesarias:
+Se descartaron columnas irrelevantes como Accident_Index y datos duplicados.
+
+Operaciones no triviales y justificación
+Creación de una tabla nueva en lugar de modificar la existente: Esto permite mantener trazabilidad y reproducibilidad, facilitando auditorías o regresos a versiones anteriores.
+Conversión de coordenadas a tipo NUMERIC: Para permitir análisis geoespaciales más precisos, se conservaron las coordenadas Latitude y Longitude como campos numéricos.
+Manejo explícito de claves primarias (accident_ID): Se usa un campo SERIAL para facilitar la referencia e integridad en modelos relacionales.
+
+Uso del script de limpieza
+Asegúrarse de tener PostgreSQL instalado y accesible.
+Ejecutar el script ubicado en scripts/limpieza_datos_proyecto.sql en un entorno PostgreSQL.
+Asegúrarse de que el archivo Road Accident Data.csv esté disponible para ser cargado a una tabla intermedia, desde donde se migran los datos limpios.
+
+Objetivo final
+Tener una base de datos limpia, estructurada y lista para:
+Análizar las tendencias de accidentes por horario y ubicación.
+Estudiar sobre las causas más comunes de accidentes.
+Modelos predictivos para prevención y mitigación de riesgos viales.
