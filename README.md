@@ -3,7 +3,7 @@
 
 Integrantes del equipo: 
 - Arindal Contreras Arrellano — 208529
-- Arturo Rodríguez Vázquez - 198271
+- Arturo Rodríguez Vázquez — 198271
 - Bernardo González Moreno — 208780
 - Lourdes Angélica Gutiérrez Landa — 207706
 ## Descripción general de los datos 
