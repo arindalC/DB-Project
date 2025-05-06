@@ -25,6 +25,26 @@ JOIN cleaned_road_data.weather_condition w ON aw.weather_id = w.id
 GROUP BY w.weather_type
 ORDER BY COUNT(aw.accident_id) DESC;
 
+-- 4. Cantidad de accidentes por periodo del día
+SELECT
+  CASE
+    WHEN accident_time BETWEEN TIME '05:00' AND TIME '11:59' THEN 'Mañana'
+    WHEN accident_time BETWEEN TIME '12:00' AND TIME '17:59' THEN 'Tarde'
+    WHEN accident_time BETWEEN TIME '18:00' AND TIME '23:59' THEN 'Noche'
+    ELSE 'Madrugada'
+  END AS "Periodo del Día",
+  COUNT(*) AS "Total Accidentes"
+FROM cleaned_road_data.road_data_db
+GROUP BY "Periodo del Día"
+ORDER BY "Total Accidentes" ASC;
+
+-- 5. Horas del día con mayor número de accidentes
+SELECT 
+  EXTRACT(HOUR FROM accident_time) AS "Hora del Día",
+  COUNT(*) AS "Total Accidentes"
+FROM cleaned_road_data.road_data_db
+GROUP BY "Hora del Día"
+ORDER BY "Total Accidentes" DESC;
 
 -- II) Consultas mas complejas para un mejor análisis
 
@@ -87,3 +107,37 @@ SELECT
 FROM junction_analysis
 WHERE gravedad IS NOT NULL
 ORDER BY porcentaje_gravedad DESC;
+
+-- 4. Combinaciones de condiciones de iluminación, clima y tipo de vía con mayor número de accidentes
+SELECT 
+  road_type AS "Tipo de Vía",
+  weather_conditions AS "Clima",
+  light_conditions AS "Iluminación",
+  COUNT(*) AS "Total Accidentes"
+FROM cleaned_road_data.road_data_db
+GROUP BY road_type, weather_conditions, light_conditions
+ORDER BY "Total Accidentes" DESC
+LIMIT 10;
+
+--5. Coordenadas geográficas que se repiten con la misma condición de luz
+SELECT 
+  latitude AS "Latitud",
+  longitude AS "Longitud",
+  light_conditions AS "Condición de Luz",
+  COUNT(*) AS "Total Accidentes"
+FROM cleaned_road_data.road_data_db
+GROUP BY latitude, longitude, light_conditions
+HAVING COUNT(*) > 1
+ORDER BY "Total Accidentes" DESC;
+
+--6. Tipos de vehículos más frecuentes en accidentes fatales
+SELECT 
+  v.vehicle_type AS "Tipo de Vehículo",
+  COUNT(*) AS "Accidentes Fatales"
+FROM cleaned_road_data.accident_vehicle av
+JOIN cleaned_road_data.accident a ON av.accident_id = a.id
+JOIN cleaned_road_data.severity s ON a.severity_id = s.id
+JOIN cleaned_road_data.vehicle v ON av.vehicle_id = v.id
+WHERE s.severity_type = 'Fatal'
+GROUP BY v.vehicle_type
+ORDER BY "Accidentes Fatales" DESC;
