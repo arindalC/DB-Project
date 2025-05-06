@@ -92,6 +92,7 @@ Las dependencias funcionales y multivaluadas que encontramos fueron las siguient
 |MV1. {accident_id} ↠ {weather_type}| Un accidente puede ocurrir bajo varias condiciones climáticas, por lo que obtenemos un conjunto de ellas|
 |MV2. {accident_id} ↠ {light_type}| Un accidente puede ocurrir bajo varias condiciones de iluminación, por lo que obtenemos un conjunto de ellas|
 
+###  Descomposición de datos:
 
 
 
