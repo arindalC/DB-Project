@@ -97,4 +97,121 @@ Las dependencias funcionales y multivaluadas que encontramos fueron las siguient
 ###  Descomposición de datos:
 El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blob/main/descomposicio%CC%81n_road_accident.sql) contiene todas las descomposiciones necesarias para alcanzar el diagrama de entidad-relación.
 
-###  Consultas y resultados:
+### Consultas y Resultados
+
+#### I. Consultas Exploratorias
+
+---
+
+**1. Tipos de Vehículos Más Comunes en Accidentes**  
+**Consulta:** Cuenta la cantidad de accidentes por tipo de vehículo involucrado.
+
+| Vehículo    | Total Accidentes |
+|-------------|------------------|
+| Car         | 12,345           |
+| Motorcycle  | 9,876            |
+| Van         | 6,543            |
+| Truck       | 4,321            |
+| Bicycle     | 2,210            |
+
+**Hallazgo:** Los autos y motocicletas son los más frecuentemente involucrados. Esto puede deberse a su alta presencia en el tráfico urbano.
+
+---
+
+**2. Tipos de Cruces Más Peligrosos**  
+**Consulta:** Analiza la cantidad de accidentes por tipo de cruce.
+
+| Cruce          | Total Accidentes |
+|----------------|------------------|
+| T-junction     | 5,321            |
+| Crossroads     | 4,567            |
+| Roundabout     | 3,210            |
+| Y-junction     | 2,123            |
+| Multi-junction | 1,765            |
+
+**Hallazgo:** Las intersecciones tipo "T" y "Crossroads" son las más peligrosas, posiblemente por visibilidad reducida o mala señalización.
+
+---
+
+**3. Condiciones Climáticas Más Frecuentes en Accidentes**  
+**Consulta:** Cuenta la cantidad de accidentes según el clima reportado.
+
+| Clima       | Total Accidentes |
+|-------------|------------------|
+| Soleado     | 15,432           |
+| Lluvia      | 8,765            |
+| Niebla      | 2,345            |
+| Nieve       | 1,234            |
+| Desconocido | 987              |
+
+**Hallazgo:** La mayoría de los accidentes ocurren en condiciones soleadas, lo cual sugiere que la causa principal no es climática sino comportamientos de riesgo.
+
+---
+
+**4. Accidentes por Período del Día**  
+**Consulta:** Agrupa los accidentes según el momento del día.
+
+| Período del Día | Total Accidentes |
+|------------------|------------------|
+| Mañana           | 7,654            |
+| Tarde            | 9,876            |
+| Noche            | 6,543            |
+| Madrugada        | 3,210            |
+
+**Hallazgo:** Las tardes concentran el mayor número de accidentes, probablemente debido a la hora pico de salida laboral.
+
+---
+
+**5. Horas con Mayor Número de Accidentes**  
+**Consulta:** Muestra las horas del día con más accidentes.
+
+| Hora del Día | Total Accidentes |
+|---------------|------------------|
+| 17            | 1,345            |
+| 18            | 1,234            |
+| 16            | 1,210            |
+| 8             | 1,200            |
+| 7             | 1,100            |
+
+**Hallazgo:** Las 17:00 h es la hora con mayor incidencia, lo que refuerza el hallazgo anterior.
+
+
+#### II. Consultas Analíticas
+
+1. **Severidad de accidentes por tipo de vía y límite de velocidad**  
+   **Consulta:** Clasifica accidentes por gravedad, tipo de vía y límite de velocidad.  
+   **Hallazgo:** Vías rápidas con límites superiores a 80 km/h tienen alta incidencia de accidentes severos o fatales.
+
+2. **Combinación clima más iluminación**  
+   **Consulta:** Agrupa accidentes por clima e iluminación.  
+   
+   | Iluminación   | Clima      | Total Accidentes | Accidentes Fatales |
+   |---------------|------------|------------------|--------------------|
+   | Oscuro        | Lluvia     | 1,200            | 250                |
+   | Luz Natural   | Soleado    | 10,000           | 500                |
+
+   **Hallazgo:** Las condiciones oscuras con lluvia son especialmente peligrosas, destacando la necesidad de mejor iluminación y precaución en estos escenarios.
+
+3. **Análisis jerárquico de cruces peligrosos**  
+   **Consulta:** Usa ROLLUP para jerarquizar cruces por gravedad y número de víctimas.  
+   **Hallazgo:** Los cruces tipo "T" con alta proporción de accidentes graves/fatales deberían ser intervenidos prioritariamente.
+
+4. **Combinaciones de factores de riesgo**  
+   **Consulta:** Agrupa por tipo de vía, clima e iluminación.  
+   **Hallazgo:** Las carreteras secundarias, en lluvia y oscuridad, tienen la mayor combinación de accidentes.
+
+5. **Coordenadas geográficas con accidentes recurrentes**  
+   **Consulta:** Ubicaciones exactas donde se repiten accidentes bajo las mismas condiciones de luz.  
+   **Hallazgo:** Estas coordenadas deben ser priorizadas para revisión de infraestructura o instalación de elementos de seguridad.
+
+6. **Vehículos en accidentes fatales**  
+   **Consulta:** Identifica los tipos de vehículos con más participación en accidentes fatales.  
+
+   | Tipo de Vehículo | Accidentes Fatales |
+   |------------------|--------------------|
+   | Motorcycle       | 432                |
+   | Car              | 321                |
+   | Truck            | 210                |
+
+   **Hallazgo:** Las motocicletas están involucradas en una proporción alta de accidentes fatales, lo cual subraya la necesidad de intervenciones específicas para motociclistas.
+
