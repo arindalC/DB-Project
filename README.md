@@ -91,7 +91,7 @@ Las dependencias funcionales y multivaluadas que encontramos fueron las siguient
 |F2.{accident_id}  → {latitude, longitude, juction_type, road_type, speed_limit}| Un accidente tiene una ubicación: latitud y longitud, tiene una intersección víal, una velocidad y un tipo de viaje|
 |MV1. {accident_id} ↠ {weather_type}| Un accidente puede ocurrir bajo varias condiciones climáticas, por lo que obtenemos un conjunto de ellas|
 |MV2. {accident_id} ↠ {light_type}| Un accidente puede ocurrir bajo varias condiciones de iluminación, por lo que obtenemos un conjunto de ellas|
-|MV3. {accident_id} ↠ {vehicle_id}| Un accidente puede involucrar varios vehículos, y un tipo de vechículos puede estar en muchos accidentes|
+
 
 
 
