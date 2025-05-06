@@ -96,5 +96,5 @@ Las dependencias funcionales y multivaluadas que encontramos fueron las siguient
 
 
 ###  Descomposición de datos:
-El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blob/main/descomposicio%CC%81n_road_accident.sql) contiene todas las descomposiciones necesarias para alcanzar el diaframa de entidad-relación.
+El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blob/main/descomposicio%CC%81n_road_accident.sql) contiene todas las descomposiciones necesarias para alcanzar el diagrama de entidad-relación.
 
