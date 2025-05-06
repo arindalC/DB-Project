@@ -84,11 +84,14 @@ Las siguientes actividades fueron llevadas a cabo para limpiar los datos:
    Se descartaron columnas como Accident_Index y se creó un nuevo id artificial ya que habían ids duplicados pero con datos diferentes. De igual manera se eliminó la columna "carriageway_hazard" y "juction_control" ya que habían muy pocos datos con un valor diferente a "None". Tampocó se agregaron los atributos "local_authority_district", "police_force", "road_sruface_conditions", ya que consideramos que no los usaremos para nuestro análisis y objetivo principal. 
    
 ###  Normalización de datos:
-Las dependencias funcionales que encontramos fueron las siguientes:
+Las dependencias funcionales y multivaluadas que encontramos fueron las siguientes:
 | **Dependencias** | **Descripción** | 
 |------------------|-----------------|
-|F1. {accident_id} → {accident_date, accident_time, severity_type, number_casualties, number_vehicles}| Un accidente tiene una fecha, una hora, tiene una severidad asociada, junto con el número de heridos y vehículos involucrados| 
+|F1. {accident_id} → {accident_date, accident_time, severity_type, number_casualties, number_vehicles, vehicle_type}| Un accidente tiene una fecha, una hora, tiene una severidad asociada, junto con el número de heridos, vehículos involucrados y el tipo de vehículo que tuvo el accidente| 
 |F2.{accident_id}  → {latitude, longitude, juction_type, road_type, speed_limit}| Un accidente tiene una ubicación: latitud y longitud, tiene una intersección víal, una velocidad y un tipo de viaje|
+|MV1. {accident_id} ↠ {weather_type}| Un accidente puede ocurrir bajo varias condiciones climáticas, por lo que obtenemos un conjunto de ellas|
+|MV2. {accident_id} ↠ {light_type}| Un accidente puede ocurrir bajo varias condiciones de iluminación, por lo que obtenemos un conjunto de ellas|
+|MV3. {accident_id} ↠ {vehicle_id}| Un accidente puede involucrar varios vehículos, y un tipo de vechículos puede estar en muchos accidentes|
 
 
 
