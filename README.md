@@ -1,4 +1,3 @@
-[Bloc de notas sin título (1).pdf](https://github.com/user-attachments/files/20052525/Bloc.de.notas.sin.titulo.1.pdf)
 # DB-Project: Análisis de accidentes de tráfico en Inglaterra 
 
 Integrantes del equipo: 
@@ -98,3 +97,4 @@ Las dependencias funcionales y multivaluadas que encontramos fueron las siguient
 ###  Descomposición de datos:
 El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blob/main/descomposicio%CC%81n_road_accident.sql) contiene todas las descomposiciones necesarias para alcanzar el diagrama de entidad-relación.
 
+###  Consultsd y resultados:
