@@ -3,9 +3,10 @@
 
 Integrantes del equipo: 
 - Arindal Contreras Arrellano — 208529
+- Lourdes Angélica Gutiérrez Landa — 207706
 - Arturo Rodríguez Vázquez — 198271
 - Bernardo González Moreno — 208780
-- Lourdes Angélica Gutiérrez Landa — 207706
+  
 ## Descripción general de los datos 
 Este proyecto busca analizar una base de datos que recopila información detallada sobre accidentes automovilísticos ocurridos en Inglaterra. Nuestro objetivo es identificar patrones y factores que influyen en los accidentes de tránsito y determinar las variables que estén asociadas con una mayor cantidad de incidencias. En particular, buscamos analizar si existe alguna relación entre las condiciones ambientales, el tipo de vehículo o la hora del día con la cantidad de accidentes que se producen. Los datos se encuentran en [este link](https://www.kaggle.com/datasets/xavierberge/road-accident-dataset?resource=download).
 
@@ -80,10 +81,12 @@ Las siguientes actividades fueron llevadas a cabo para limpiar los datos:
 5. Normalización de valores:
    Se agruparon y homogeneizaron valores en campos como Accident Severity, Weather_Conditions y Urban_or_Rural_Area.
 6. Eliminación de registros o columnas:
-   Se descartaron columnas como Accident_Index y se creó un nuevo id artificial ya que habían ids duplicados pero con datos diferentes. De igual manera se eliminó la       
-   columna "carriageway_hazard" ya que habían muy pocos datos con un valor diferente a "None". 
-
-
+   Se descartaron columnas como Accident_Index y se creó un nuevo id artificial ya que habían ids duplicados pero con datos diferentes. De igual manera se eliminó la columna "carriageway_hazard" y "juction_control" ya que habían muy pocos datos con un valor diferente a "None". Tampocó se agregaron los atributos "local_authority_district", "police_force", "road_sruface_conditions", ya que consideramos que no los usaremos para nuestro análisis y objetivo principal. 
+   
+###  Normalización de datos:
+Las dependencias funcionales que encontramos fueron las siguientes:
+| **Dependencias** | **Descripción** | 
+|F1. {accident_id} → {accident_date, accident_time, severity_type, number_casualties, number_vehicles}| Un accidente tiene una fecha, una hora, tiene una severidad asociada, junto con el número de heridos y vehículos involucrados| F2.{accident_id}  → {latitude, longitude, juction_type, road_type, speed_limit}|
 
 
 
