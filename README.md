@@ -1,4 +1,4 @@
-
+[Bloc de notas sin título (1).pdf](https://github.com/user-attachments/files/20052525/Bloc.de.notas.sin.titulo.1.pdf)
 # DB-Project: Análisis de accidentes de tráfico en Inglaterra 
 
 Integrantes del equipo: 
@@ -92,6 +92,9 @@ Las dependencias funcionales y multivaluadas que encontramos fueron las siguient
 |MV1. {accident_id} ↠ {weather_type}| Un accidente puede ocurrir bajo varias condiciones climáticas, por lo que obtenemos un conjunto de ellas|
 |MV2. {accident_id} ↠ {light_type}| Un accidente puede ocurrir bajo varias condiciones de iluminación, por lo que obtenemos un conjunto de ellas|
 ###  Diagrama de entidad-relación:
+<img width="843" alt="Captura de Pantalla 2025-05-05 a la(s) 21 52 14" src="https://github.com/user-attachments/assets/70be2aac-6558-4233-8362-f6a224ca73fd" />
+
+
 ###  Descomposición de datos:
 El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blob/main/descomposicio%CC%81n_road_accident.sql) contiene todas las descomposiciones necesarias para alcanzar el diaframa de entidad-relación.
 
