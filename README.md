@@ -86,7 +86,9 @@ Las siguientes actividades fueron llevadas a cabo para limpiar los datos:
 ###  Normalización de datos:
 Las dependencias funcionales que encontramos fueron las siguientes:
 | **Dependencias** | **Descripción** | 
-|F1. {accident_id} → {accident_date, accident_time, severity_type, number_casualties, number_vehicles}| Un accidente tiene una fecha, una hora, tiene una severidad asociada, junto con el número de heridos y vehículos involucrados| F2.{accident_id}  → {latitude, longitude, juction_type, road_type, speed_limit}|
+|------------------|-----------------|
+|F1. {accident_id} → {accident_date, accident_time, severity_type, number_casualties, number_vehicles}| Un accidente tiene una fecha, una hora, tiene una severidad asociada, junto con el número de heridos y vehículos involucrados| 
+|F2.{accident_id}  → {latitude, longitude, juction_type, road_type, speed_limit}| Un accidente tiene una ubicación: latitud y longitud, tiene una intersección víal, una velocidad y un tipo de viaje|
 
 
 
