@@ -77,7 +77,7 @@ SELECT
   COUNT(DISTINCT CASE WHEN s.severity_type = 'Fatal' THEN a.id END) as accidentes_fatales
 FROM public.accident a
 JOIN public.accident_light al ON a.id = al.accident_id
-JOIN publica.light_condition lc ON al.light_id = lc.id
+JOIN public.light_condition lc ON al.light_id = lc.id
 JOIN public.accident_weather aw ON a.id = aw.accident_id
 JOIN public.weather_condition wc ON aw.weather_id = wc.id
 JOIN public.severity s ON a.severity_id = s.id
