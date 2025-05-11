@@ -43,7 +43,7 @@ Por un lado, el conocimiento de estos datos conlleva consideraciones éticas, ya
 | Vehicle_Type | Tipo de vehículo involucrado. | Categórico |
 
 ### Carga inicial de datos en PostgreSQL:
-**Nota**: Asegúrate de guardar el archivo `.csv` antes de comenzar.
+**Nota**: Asegúrate de guardar el archivo `.csv` antes de comenzar. Se encuentra es: [Base de datos](https://github.com/arindalC/DB-Project/blob/main/0.Road%20Accident%20Data.csv.zip).
 
 1. Crear la base de datos (desde psql):
   ```
