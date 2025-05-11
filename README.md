@@ -46,13 +46,13 @@ Por un lado, el conocimiento de estos datos conlleva consideraciones éticas, ya
 **Nota**: Asegúrate de guardar el archivo `.csv` antes de comenzar.
 
 1. Crear la base de datos (desde psql):
-
-   CREATE DATABASE accidentes_trafico;
-   
+  ```
+  CREATE DATABASE accidentes_trafico;
+  ``` 
 3. Conectarse a la base de datos (psql):
-
-   postgres=# \c accidentes_trafico
-   
+  ```
+  \c accidentes_trafico
+  ```
 3. Crear el esquema y la tabla (desde PostgresSQL):
 
     [Ver carga_inicial.sql](https://github.com/arindalC/DB-Project/blob/main/carga_inicial.sql)
