@@ -111,11 +111,11 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
 
 | Vehículo    | Total Accidentes |
 |-------------|------------------|
-| Car         | 12,345           |
-| Motorcycle  | 9,876            |
-| Van         | 6,543            |
-| Truck       | 4,321            |
-| Bicycle     | 2,210            |
+| Car                                       | 239,739          |
+| Van/ Goods 3.5 tonnes mgw or under        | 15,695           |
+| Motorcycle over 500cc                     | 6,543            |
+| Bus or Coach (17 or more pass seats)      | 4,321            |
+| Motorcycle 125cc and under                | 2,210            |
 
 **Hallazgo:** Los autos y motocicletas son los más frecuentemente involucrados. Esto puede deberse a su alta presencia en el tráfico urbano.
 
