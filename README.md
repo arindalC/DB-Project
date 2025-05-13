@@ -66,6 +66,8 @@ WITH (FORMAT CSV, HEADER true, DELIMITER ',');
 
  ###  Análisis exploratorio de datos:
  El archivo [road_accidents_eda.sql]([https://github.com/arindalC/DB-Project/blob/main/road_accidents_eda.sql](https://github.com/arindalC/DB-Project/blob/main/Road%20Accident%20Data.csv.zip)) contiene una colección de consultas SQL utilizadas para realizar el análisis exploratorio de los datos. 
+
+Durante el análisis exploratorio de los datos, identificamos varias inconsistencias. Por ejemplo, observamos que la variable id, que se supone que debería de ser un identificador único, presentaba únicamente 197,644 valores únicos a pesar de que el conjunto total contenía 307,973 observaciones. También notamos que en la columna "Carriage_hazards" hay 302,546 datos con el valor "none" y en la columna de "junction_control" habían 98056 datos con el valor de "Data missing or out of range".
    
 ###  Limpieza de datos:
 Este repositorio contiene los datos y scripts asociados a la limpieza y preparación de datos sobre la base de datos. 
