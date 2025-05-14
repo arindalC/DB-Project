@@ -113,11 +113,11 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
 
 | Vehículo    | Total Accidentes |
 |-------------|------------------|
-| Car                                       | 239,739          |
+| Car                                       | 239,794          |
 | Van/ Goods 3.5 tonnes mgw or under        | 15,695           |
-| Motorcycle over 500cc                     | 6,543            |
-| Bus or Coach (17 or more pass seats)      | 4,321            |
-| Motorcycle 125cc and under                | 2,210            |
+| Motorcycle over 500cc                     | 11,226           |
+| Bus or Coach (17 or more pass seats)      | 8,686            |
+| Motorcycle 125cc and under                | 6,852            |
 
 **Hallazgo:** Los autos y motocicletas son los más frecuentemente involucrados. Esto puede deberse a su alta presencia en el tráfico urbano.
 
@@ -128,11 +128,11 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
 
 | Cruce          | Total Accidentes |
 |----------------|------------------|
-| T-junction     | 5,321            |
-| Crossroads     | 4,567            |
-| Roundabout     | 3,210            |
-| Y-junction     | 2,123            |
-| Multi-junction | 1,765            |
+| Not at junction or within 20m     | 5,321            |
+| T or staggered junction           | 4,567            |
+| Crossroads                        | 3,210            |
+| Roundabout                        | 2,123            |
+| Private drive or entrance         | 1,765            |
 
 **Hallazgo:** Las intersecciones tipo "T" y "Crossroads" son las más peligrosas, posiblemente por visibilidad reducida o mala señalización.
 
@@ -143,11 +143,14 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
 
 | Clima       | Total Accidentes |
 |-------------|------------------|
-| Soleado     | 15,432           |
-| Lluvia      | 8,765            |
-| Niebla      | 2,345            |
-| Nieve       | 1,234            |
-| Desconocido | 987              |
+| No high winds    | 284,193  |
+| Fine             | 247,628  |
+| Raining          | 38,398   |
+| Other            | 8,801    |
+| high winds       | 7,210    |
+| Not Specified    | 6,057    |
+| Snowing          | 1,234    |
+| Fog or mist      | 987      |
 
 **Hallazgo:** La mayoría de los accidentes ocurren en condiciones soleadas, lo cual sugiere que la causa principal no es climática sino comportamientos de riesgo.
 
