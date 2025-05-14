@@ -198,7 +198,7 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
 2. **Combinación clima más iluminación**  
    **Consulta:** Agrupa accidentes por clima e iluminación.  
    
-   | Iluminación               | Clima                  | Accidentes Totales | Accidentes Fatales |
+| Iluminación               | Clima                  | Accidentes Totales  | Accidentes Fatales  |
 |---------------------------|------------------------|---------------------|---------------------|
 | Daylight                  | Fine no high winds     | 188,558             | 2,047               |
 | Darkness – lights lit     | Fine no high winds     | 42,668              | 701                 |
@@ -213,19 +213,22 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
 
 4. **Combinaciones de factores de riesgo**  
    **Consulta:** Agrupa por tipo de vía, clima e iluminación.
-     | Severidad | Tipo de Vía           | Límite de Velocidad (mph) | Accidentes |
+
+| Severidad | Tipo de Vía            | Límite de Velocidad (mph)   | Accidentes |
 |-----------|------------------------|-----------------------------|------------|
 | Slight    | Single carriageway     | 30                          | 144,412    |
+| Slight    | Single carriageway     | 40                          | 12,269     |
 | Slight    | Single carriageway     | 60                          | 32,159     |
 | Serious   | Single carriageway     | 30                          | 20,765     |
 | Slight    | Dual carriageway       | 70                          | 16,660     |
-| Slight    | Single carriageway     | 40                          | 12,269     |
+
    **Hallazgo:** Estos puntos críticos guían la ubicación de cámaras de velocidad y la revisión de los límites de velocidad.
 
 
 6. **Coordenadas geográficas con accidentes recurrentes**  
    **Consulta:** Ubicaciones exactas donde se repiten accidentes bajo las mismas condiciones de luz.
-   | Latitud   | Longitud    | Condiciones de Luz | Accidentes |
+   
+| Latitud   | Longitud    | Condiciones de Luz | Accidentes |
 |-----------|-------------|--------------------|------------|
 | 51.496389 | –3.143767   | Daylight           | 15         |
 | 52.967634 | –1.190861   | Daylight           | 15         |
@@ -233,7 +236,7 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
 | 51.506693 | –3.310596   | Daylight           | 13         |
 | 51.494771 | –3.206534   | Daylight           | 12         |
    **Hallazgo:** Compartir estas coordenadas con los consejos locales permite realizar auditorías micro de la señalización, las condiciones de la superficie y la iluminación.
-7. **Vehículos en accidentes fatales**  
+8. **Vehículos en accidentes fatales**  
    **Consulta:** Identifica los tipos de vehículos con más participación en accidentes fatales.  
 
    | Tipo de Vehículo | Accidentes Fatales |
