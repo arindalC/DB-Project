@@ -161,10 +161,10 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
 
 | Período del Día | Total Accidentes |
 |------------------|------------------|
-| Mañana           | 7,654            |
-| Tarde            | 9,876            |
-| Noche            | 6,543            |
-| Madrugada        | 3,210            |
+| Tarde (15-18h)         | 132,398          |
+| Mañana (05-12h)        | 88,369           |
+| Noche (18-24h)         | 72,305            |
+| Madrugada (00-05h)     | 14,901            |
 
 **Hallazgo:** Las tardes concentran el mayor número de accidentes, probablemente debido a la hora pico de salida laboral.
 
@@ -173,13 +173,18 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
 **5. Horas con Mayor Número de Accidentes**  
 **Consulta:** Muestra las horas del día con más accidentes.
 
-| Hora del Día | Total Accidentes |
-|---------------|------------------|
-| 17            | 1,345            |
-| 18            | 1,234            |
-| 16            | 1,210            |
-| 8             | 1,200            |
-| 7             | 1,100            |
+| Hora   | Accidentes |
+|--------|------------|
+| 17:00  | 26,964     |
+| 16:00  | 24,903     |
+| 15:00  | 24,151     |
+| 08:00  | 22,552     |
+| 18:00  | 21,063     |
+| 14:00  | 19,067     |
+| 13:00  | 18,971     |
+| 12:00  | 18,342     |
+| 11:00  | 16,141     |
+| 19:00  | 15,851     |
 
 **Hallazgo:** Las 17:00 h es la hora con mayor incidencia, lo que refuerza el hallazgo anterior.
 
@@ -193,10 +198,13 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
 2. **Combinación clima más iluminación**  
    **Consulta:** Agrupa accidentes por clima e iluminación.  
    
-   | Iluminación   | Clima      | Total Accidentes | Accidentes Fatales |
-   |---------------|------------|------------------|--------------------|
-   | Oscuro        | Lluvia     | 1,200            | 250                |
-   | Luz Natural   | Soleado    | 10,000           | 500                |
+   | Iluminación               | Clima                  | Accidentes Totales | Accidentes Fatales |
+|---------------------------|------------------------|---------------------|---------------------|
+| Daylight                  | Fine no high winds     | 188,558             | 2,047               |
+| Darkness – lights lit     | Fine no high winds     | 42,668              | 701                 |
+| Daylight                  | Raining no high winds  | 21,603              | 197                 |
+| Darkness – no lighting    | Fine no high winds     | 10,817              | 491                 |
+| Darkness – lights lit     | Raining no high winds  | 10,190              | 96                  |
 
    **Hallazgo:** Las condiciones oscuras con lluvia son especialmente peligrosas, destacando la necesidad de mejor iluminación y precaución en estos escenarios.
 
@@ -205,21 +213,37 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
    **Hallazgo:** Los cruces tipo "T" con alta proporción de accidentes graves/fatales deberían ser intervenidos prioritariamente.
 
 4. **Combinaciones de factores de riesgo**  
-   **Consulta:** Agrupa por tipo de vía, clima e iluminación.  
+   **Consulta:** Agrupa por tipo de vía, clima e iluminación.
+     | Severidad | Tipo de Vía           | Límite de Velocidad (mph) | Accidentes |
+|-----------|------------------------|-----------------------------|------------|
+| Slight    | Single carriageway     | 30                          | 144,412    |
+| Slight    | Single carriageway     | 60                          | 32,159     |
+| Serious   | Single carriageway     | 30                          | 20,765     |
+| Slight    | Dual carriageway       | 70                          | 16,660     |
+| Slight    | Single carriageway     | 40                          | 12,269     |
    **Hallazgo:** Las carreteras secundarias, en lluvia y oscuridad, tienen la mayor combinación de accidentes.
 
-5. **Coordenadas geográficas con accidentes recurrentes**  
-   **Consulta:** Ubicaciones exactas donde se repiten accidentes bajo las mismas condiciones de luz.  
+6. **Coordenadas geográficas con accidentes recurrentes**  
+   **Consulta:** Ubicaciones exactas donde se repiten accidentes bajo las mismas condiciones de luz.
+   | Latitud   | Longitud    | Condiciones de Luz | Accidentes |
+|-----------|-------------|--------------------|------------|
+| 51.496389 | –3.143767   | Daylight           | 15         |
+| 52.967634 | –1.190861   | Daylight           | 15         |
+| 52.949719 | –0.977611   | Daylight           | 14         |
+| 51.506693 | –3.310596   | Daylight           | 13         |
+| 51.494771 | –3.206534   | Daylight           | 12         |
    **Hallazgo:** Estas coordenadas deben ser priorizadas para revisión de infraestructura o instalación de elementos de seguridad.
 
-6. **Vehículos en accidentes fatales**  
+7. **Vehículos en accidentes fatales**  
    **Consulta:** Identifica los tipos de vehículos con más participación en accidentes fatales.  
 
    | Tipo de Vehículo | Accidentes Fatales |
    |------------------|--------------------|
-   | Motorcycle       | 432                |
-   | Car              | 321                |
-   | Truck            | 210                |
+   | Car                     | 432                |
+   | Van / Goods < 3.5t      | 321                |
+   | Motorcycle > 500cc      | 210                |
+   | Bus/ coach (> 17 seats) | 86                 |
+   | Motorcycle < 125cc      | 81                 |
 
    **Hallazgo:** Las motocicletas están involucradas en una proporción alta de accidentes fatales, lo cual subraya la necesidad de intervenciones específicas para motociclistas.
 
