@@ -111,6 +111,7 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
 **1. Tipos de Vehículos Más Comunes en Accidentes**  
 **Consulta:** Cuenta la cantidad de accidentes por tipo de vehículo involucrado.
 
+
 | Vehículo    | Total Accidentes |
 |-------------|------------------|
 | Car                                       | 239,794          |
@@ -126,13 +127,13 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
 **2. Tipos de Cruces Más Peligrosos**  
 **Consulta:** Analiza la cantidad de accidentes por tipo de cruce.
 
-| Cruce          | Total Accidentes |
-|----------------|------------------|
-| Not at junction or within 20m     | 5,321            |
-| T or staggered junction           | 4,567            |
-| Crossroads                        | 3,210            |
-| Roundabout                        | 2,123            |
-| Private drive or entrance         | 1,765            |
+| Cruce                                | Total Accidentes |
+|--------------------------------------|------------------|
+| Not at junction or within 20 meters  | 123,081          |
+| T or staggered junction              | 96,715           |
+| Crossroads                           | 29,945           |
+| Roundabout                           | 27,264           |
+| Private drive or entrance            | 10,874           |
 
 **Hallazgo:** Casi la mitad de todas las colisiones ocurren en intersecciones en T, desfasadas o en cruceta, zonas donde las normas de prioridad suelen malinterpretarse. La solucion seria mejorar la señalizacion y la visibilidad en estos puntos.
 
@@ -149,8 +150,8 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
 | Other            | 8,801    |
 | high winds       | 7,210    |
 | Not Specified    | 6,057    |
-| Snowing          | 1,234    |
-| Fog or mist      | 987      |
+| Snowing          | 5,377    |
+| Fog or mist      | 1,690    |
 
 **Hallazgo:** La lluvia es menos frecuente, pero se correlaciona con un mayor número de lesiones. Las medidas preventivas para carreteras mojadas, como el drenaje de superficie y los recubrimientos antideslizantes, ofrecen un alto impacto.
 
@@ -249,4 +250,20 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
 
    **Hallazgo:** Los automóviles siguen siendo los más mortales simplemente por su exposición, pero las motocicletas de alta cilindrada están sobrerrepresentadas en relación con su participación en el tráfico.
 
+9. **Porcentaje de accidentes fatales**  
+   **Consulta:** Sobre el numero de accidentes totales, sacar el porcentaje de accidentes mortales.  
+   | Tipo de Vehículo | Total de accidentes | Accidentes Fatales | Tasa de Mortalidad |
+   |------------------|--------------------|------------------|--------------------|
+   | Car                     | 432                | 239,794          |  0.18% |
+   | Van / Goods < 3.5t      | 321                | 15,695           |  2.04% |
+   | Motorcycle > 500cc      | 210                | 11,226           |  1.87% |
+   | Bus/ coach (> 17 seats) | 86                 | 8,686            |  0.99% |
+   | Motorcycle < 125cc      | 81                 | 6,852            |  1.18% |
+  
+
+   **Hallazgo:** Apesar de que hay un numero mayor de automoviles el porcantaje de accidentes mortales sobre la cantidad total de accidentes es mayor en vehiculos de carga o en motocicletas.
+
+   
+**Posdata**
+Es Importante recalcar que estos hallazgos no sólo son insumos para análisis técnico, sino también una herramienta ética y social. Con el cual nos preguntamos como podemos contribuir para disminuir el número de accidentes y disminuir el número de afectados. Es un recordatorio de que detrás de cada número hay una vida, y que los datos, usados con responsabilidad y empatía, también pueden salvarlas.
 
