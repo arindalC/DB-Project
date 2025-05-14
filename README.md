@@ -119,7 +119,7 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
 | Bus or Coach (17 or more pass seats)      | 8,686            |
 | Motorcycle 125cc and under                | 6,852            |
 
-**Hallazgo:** Los autos y motocicletas son los más frecuentemente involucrados. Esto puede deberse a su alta presencia en el tráfico urbano.
+**Hallazgo:** Los automóviles por sí solos representan el 78 % de todos los accidentes registrados, por lo que cualquier estrategia de seguridad vial debe centrarse en el comportamiento de los autos particulares (velocidad, distracción, deterioro de las capacidades).
 
 ---
 
@@ -134,7 +134,7 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
 | Roundabout                        | 2,123            |
 | Private drive or entrance         | 1,765            |
 
-**Hallazgo:** Las intersecciones tipo "T" y "Crossroads" son las más peligrosas, posiblemente por visibilidad reducida o mala señalización.
+**Hallazgo:** Casi la mitad de todas las colisiones ocurren en intersecciones en T, desfasadas o en cruceta, zonas donde las normas de prioridad suelen malinterpretarse. La solucion seria mejorar la señalizacion y la visibilidad en estos puntos.
 
 ---
 
@@ -152,7 +152,7 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
 | Snowing          | 1,234    |
 | Fog or mist      | 987      |
 
-**Hallazgo:** La mayoría de los accidentes ocurren en condiciones soleadas, lo cual sugiere que la causa principal no es climática sino comportamientos de riesgo.
+**Hallazgo:** La lluvia es menos frecuente, pero se correlaciona con un mayor número de lesiones. Las medidas preventivas para carreteras mojadas, como el drenaje de superficie y los recubrimientos antideslizantes, ofrecen un alto impacto.
 
 ---
 
@@ -206,8 +206,7 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
 | Darkness – no lighting    | Fine no high winds     | 10,817              | 491                 |
 | Darkness – lights lit     | Raining no high winds  | 10,190              | 96                  |
 
-   **Hallazgo:** Las condiciones oscuras con lluvia son especialmente peligrosas, destacando la necesidad de mejor iluminación y precaución en estos escenarios.
-
+   **Hallazgo:** El día y el clima seco representan más de la mitad del conjunto de datos, pero el riesgo de mortalidad aumenta en escenas oscuras y sin iluminación, lo que justifica las inversiones en iluminación vial.
 3. **Análisis jerárquico de cruces peligrosos**  
    **Consulta:** Usa ROLLUP para jerarquizar cruces por gravedad y número de víctimas.  
    **Hallazgo:** Los cruces tipo "T" con alta proporción de accidentes graves/fatales deberían ser intervenidos prioritariamente.
@@ -221,7 +220,8 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
 | Serious   | Single carriageway     | 30                          | 20,765     |
 | Slight    | Dual carriageway       | 70                          | 16,660     |
 | Slight    | Single carriageway     | 40                          | 12,269     |
-   **Hallazgo:** Las carreteras secundarias, en lluvia y oscuridad, tienen la mayor combinación de accidentes.
+   **Hallazgo:** Estos puntos críticos guían la ubicación de cámaras de velocidad y la revisión de los límites de velocidad.
+
 
 6. **Coordenadas geográficas con accidentes recurrentes**  
    **Consulta:** Ubicaciones exactas donde se repiten accidentes bajo las mismas condiciones de luz.
@@ -232,8 +232,7 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
 | 52.949719 | –0.977611   | Daylight           | 14         |
 | 51.506693 | –3.310596   | Daylight           | 13         |
 | 51.494771 | –3.206534   | Daylight           | 12         |
-   **Hallazgo:** Estas coordenadas deben ser priorizadas para revisión de infraestructura o instalación de elementos de seguridad.
-
+   **Hallazgo:** Compartir estas coordenadas con los consejos locales permite realizar auditorías micro de la señalización, las condiciones de la superficie y la iluminación.
 7. **Vehículos en accidentes fatales**  
    **Consulta:** Identifica los tipos de vehículos con más participación en accidentes fatales.  
 
@@ -245,5 +244,6 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
    | Bus/ coach (> 17 seats) | 86                 |
    | Motorcycle < 125cc      | 81                 |
 
-   **Hallazgo:** Las motocicletas están involucradas en una proporción alta de accidentes fatales, lo cual subraya la necesidad de intervenciones específicas para motociclistas.
+   **Hallazgo:** Los automóviles siguen siendo los más mortales simplemente por su exposición, pero las motocicletas de alta cilindrada están sobrerrepresentadas en relación con su participación en el tráfico.
+
 
