@@ -120,9 +120,10 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
 | Bus or Coach (17 or more pass seats)      | 8,686            |
 | Motorcycle 125cc and under                | 6,852            |
 
+![Grafica 1 autos](https://github.com/user-attachments/assets/51a255d8-4bf1-4ede-9cdd-14152dcde08d)
+
 **Hallazgo:** Los automóviles por sí solos representan el 78 % de todos los accidentes registrados, por lo que cualquier estrategia de seguridad vial debe centrarse en el comportamiento de los autos particulares (velocidad, distracción, deterioro de las capacidades).
 
----
 
 **2. Tipos de Cruces Más Peligrosos**  
 **Consulta:** Analiza la cantidad de accidentes por tipo de cruce.
@@ -153,6 +154,8 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
 | Snowing          | 5,377    |
 | Fog or mist      | 1,690    |
 
+
+
 **Hallazgo:** La lluvia es menos frecuente, pero se correlaciona con un mayor número de lesiones. Las medidas preventivas para carreteras mojadas, como el drenaje de superficie y los recubrimientos antideslizantes, ofrecen un alto impacto.
 
 ---
@@ -166,6 +169,8 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
 | Mañana (05-12h)        | 88,369           |
 | Noche (18-24h)         | 72,305            |
 | Madrugada (00-05h)     | 14,901            |
+
+![Grafica 2 Horas](https://github.com/user-attachments/assets/88325946-f009-4b69-8ef3-931bfc006cb6)
 
 **Hallazgo:** Las tardes concentran el mayor número de accidentes, probablemente debido a la hora pico de salida laboral.
 
@@ -187,10 +192,13 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
 | 11:00  | 16,141     |
 | 19:00  | 15,851     |
 
+![Grafica 3 Horario](https://github.com/user-attachments/assets/5432da42-0b3b-4b76-9a41-6fef69841225)
+
 **Hallazgo:** Las 17:00 h es la hora con mayor incidencia, lo que refuerza el hallazgo anterior.
 
 
 #### II. Consultas Analíticas
+
 
 1. **Severidad de accidentes por tipo de vía y límite de velocidad**  
    **Consulta:** Clasifica accidentes por gravedad, tipo de vía y límite de velocidad.  
@@ -247,6 +255,8 @@ El archivo [descomposicion_de_datos:](https://github.com/arindalC/DB-Project/blo
    | Motorcycle > 500cc      | 210                |
    | Bus/ coach (> 17 seats) | 86                 |
    | Motorcycle < 125cc      | 81                 |
+
+   ![Grafica 4 Accidentes fatales](https://github.com/user-attachments/assets/ab371ffd-e0ee-45cf-9a58-f74904faa738)
 
    **Hallazgo:** Los automóviles siguen siendo los más mortales simplemente por su exposición, pero las motocicletas de alta cilindrada están sobrerrepresentadas en relación con su participación en el tráfico.
 
